@@ -1,1 +1,17 @@
 @import "bootstrap";
+@import url('https://fonts.googleapis.com/css?family=East+Sea+Dokdo&display=swap');
+
+
+
+.navbar{
+  font-family: 'East Sea Dokdo', cursive;
+  font-weight: 200;
+  box-shadow:0px 1px 3px #2a2a2a;
+  background: image_url('little_pluses.png')
+}
+
+.navbar-inverse a.navbar-brand {
+  font-family: 'East Sea Dokdo', cursive;
+  font-weight: 100;
+  color: white;
+}
