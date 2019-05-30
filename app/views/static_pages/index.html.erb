@@ -5,18 +5,18 @@
   <a class="navbar-brand" href="#">Navbar</a>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      <% if user_signed_in? %>
+       <li class="nav-item">
+        <%= link_to 'Sign Out', destroy_user_session_path,method: :delete, class: 'nav-link' %>
+      </li>
+      <% else %>
+      <li class="nav-item">
+        <%= link_to 'Sign In', new_user_session_path, class:'nav-link' %>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
+      <%= link_to 'Sign up', new_user_registration_path, class: 'nav-link' %>
+    </li>
+      <% end %>
     </ul>
   </div>
 </nav>
@@ -37,14 +37,20 @@
 <br />
 <div class="row feature text-center">
   <div class="col-12 col-sm">
-    <h3>Feature 1</h3>
+    <h3>Amazing Courses</h3>
+    <br />
+    <p>Choose from any number of courses to study with amazing teachers.</p>
   </div>
 
   <div class="col-12 col-sm">
-    <h3>Feature 2</h3>
+    <h3>Learn At Your Own Pace</h3>
+    <br />
+    <p>Enroll and access a courses archive of lessons.</p>
   </div>
 
   <div class="col-12 col-sm">
-    <h3>Feature 3</h3>
+    <h3>Join our Community</h3>
+    <br />
+    <p>Learn with a community of like-minded individuals.</p>
   </div>
 </div>
