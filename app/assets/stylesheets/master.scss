@@ -1,7 +1,7 @@
 @import "bootstrap";
 @import url('https://fonts.googleapis.com/css?family=East+Sea+Dokdo&display=swap');
 @import url('https://fonts.googleapis.com/css?family=East+Sea+Dokdo|Meddon&display=swap');
-
+@import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
 
 .navbar{
   font-family: 'East Sea Dokdo', cursive;
@@ -35,7 +35,7 @@ h1, h2, h3, h4, h5, h6, .navbar {
   color: white;
 }
 .frosty h1{
-  font-family: 'East Sea Dokdo', cursive;
+    font-family: 'East Sea Dokdo', cursive;
 font-family: 'Meddon', cursive;
   font-weight: 100;
   text-shadow: rgba(0, 0, 0, 0.95) 1px 1px;
@@ -59,8 +59,7 @@ font-family: 'Meddon', cursive;
 
 body {
   background: image_url('bg.png');
-  font-family: 'East Sea Dokdo', cursive;
-font-family: 'Meddon', cursive;
+font-family: 'Lobster', cursive;
 }
 .booyah-box {
   -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
