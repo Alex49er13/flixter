@@ -1,6 +1,6 @@
 class Instructor::LessonsController < ApplicationController
   before_action :authenticate_user!
-  before_actioin :require_authorized_for_current_space
+  before_action :require_authorized_for_current_space
   def new 
     @lesson = Lesson.new
   end
@@ -20,7 +20,7 @@ class Instructor::LessonsController < ApplicationController
 
 
   helper_method :current_space
-  def Current_space
+  def current_space
     @current_space ||= Space.find(params[:space_id])
   end
 
