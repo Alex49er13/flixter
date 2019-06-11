@@ -1,10 +1,10 @@
 <br/>
 
 
-<h1>can you see me</h1>
-<div class="Booyah-box col-10 offset-1">
+
+<div class="booyah-box col-10 offset-1">
   <h1><%= @course.title %></h1>
-    <br/>
+  <br/>
   <div class="row">
     <div class="col-sm-4 col-12 text-center">
       <span class="badge badge-default">
@@ -21,5 +21,25 @@
       <div class="col-sm-8 col-12">
         <%= @course.description %>  
       </div> 
+  </div>
+
+
+  <div class="col-12">
+    <% @course.spaces.each do|space| %>
+      <div class="section">
+        <%= space.title %>
+        <% space.lessons.each do|lesson| %>
+        
+        <div class="lesson">
+          <%= link_to lesson_path(lesson) do %>
+        <b><%= lesson.title %></b>
+        -
+        <%= lesson.subtitle %>
+        <% end %>
+      </div>
+      <% end %>
+
+      </div>
+    <% end %>
   </div>
 </div>

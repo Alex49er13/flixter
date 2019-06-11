@@ -15,19 +15,18 @@ class Instructor::CoursesController < ApplicationController
   end
 
   def show
-   
-
-  end
+   end
 
   private
 
   def require_authorized_for_current_course
     if current_course.user != current_user
       render plain: "unauthorized", status: :unauthorized
-
+  end
+end
   helper_method :current_course
-  def curremt_course
-    @current_course || =course.find(params[:id])
+  def current_course
+    @current_course ||=Course.find(params[:id])
   end
 
 
