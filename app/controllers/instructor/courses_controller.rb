@@ -10,11 +10,13 @@ class Instructor::CoursesController < ApplicationController
       # :current_course.image.create(course_params[:current_course])
       # :current_course.images.create(photo_params)
       # redirect_to instructor_course_path(:current_course)
-       current_course.find(params[:id])
-      current_course.images.create(course_params)
-      redirect_to instructor_course_path(:current_course)
+      #  current_course.find(params[:id])
+      # current_course.images.create(course_params)
+      # redirect_to instructor_course_path(course_params)
     
+   
     @course = current_user.courses.create(course_params)
+
     if @course.valid?
     redirect_to instructor_course_path(@course)
   else
@@ -23,7 +25,7 @@ class Instructor::CoursesController < ApplicationController
   end
 
   def show
-
+# @image = Image.new
    end
 
   private
