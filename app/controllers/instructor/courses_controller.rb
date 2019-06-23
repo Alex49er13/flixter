@@ -3,12 +3,14 @@ class Instructor::CoursesController < ApplicationController
  before_action :require_authorized_for_current_course, only: [:show]
   def new
     @course = Course.new
+    # @image = Image.new
   end
 
    def create
+      # @image = Image.new
       # :current_course.image
       # :current_course.image.create(course_params[:current_course])
-      # :current_course.images.create(photo_params)
+      # @course.images.create(course_params)
       # redirect_to instructor_course_path(:current_course)
       #  current_course.find(params[:id])
       # current_course.images.create(course_params)
@@ -25,7 +27,7 @@ class Instructor::CoursesController < ApplicationController
   end
 
   def show
-# @image = Image.new
+     # @image = Image.new
    end
 
   private
