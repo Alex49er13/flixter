@@ -227,7 +227,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bootsnap (>= 1.1.0)
+  bootsnap
   bootstrap (= 4.0.0.alpha6)
   byebug
   capybara (>= 2.15)
