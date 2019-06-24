@@ -1,7 +1,7 @@
-class ImageUploader < CarrierWave::Uploader::Base
+class VideoUploader < CarrierWave::Uploader::Base
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
-  include CarrierWave::MiniMagick
+  # include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader:
   # storage :file
@@ -12,9 +12,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   def store_dir
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
-class User < ActiveRecord::Base
-  mount_uploader :image, ImageUploader
-end
+
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url(*args)
   #   # For Rails 3.1+ asset pipeline compatibility:
@@ -24,7 +22,6 @@ end
   # end
 
   # Process files as they are uploaded:
-  process resize_to_fill: [800, 350]
   # process scale: [200, 300]
   #
   # def scale(width, height)
@@ -33,7 +30,7 @@ end
 
   # Create different versions of your uploaded files:
   # version :thumb do
-  # process resize_to_fit: [50, 50]
+  #   process resize_to_fit: [50, 50]
   # end
 
   # Add a white list of extensions which are allowed to be uploaded.
