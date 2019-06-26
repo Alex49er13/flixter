@@ -30,19 +30,26 @@
 
   <div class="col-12">
     <% @course.spaces.each do|space| %>
+     <br /><br />
       <div class="section">
+        <h3>
         <%= space.title %>
+      </h3>
+      <div class="row">
         <% space.lessons.each do|lesson| %>
-        
-        <div class="lesson">
+          <div class="col-12 col-sm-6">
+        <div class="lesson text-center">
+          <br />
           <%= link_to lesson_path(lesson) do %>
         <b><%= lesson.title %></b>
-        -
+        <br />
         <%= lesson.subtitle %>
         <% end %>
       </div>
+    </div>
       <% end %>
-
+      </div>
+      <br class="clr" />
       </div>
     <% end %>
   </div>
