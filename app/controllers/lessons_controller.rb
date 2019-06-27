@@ -1,4 +1,5 @@
 class LessonsController < ApplicationController
+  before_action :require_authorized_user_enrolled_in?, [:show]
   def show
   end
 
