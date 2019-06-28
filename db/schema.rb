@@ -45,11 +45,6 @@ ActiveRecord::Schema.define(version: 2019_06_26_005416) do
     t.index ["space_id"], name: "index_lessons_on_space_id"
   end
 
-  create_table "sections", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "spaces", force: :cascade do |t|
     t.string "title"
     t.integer "course_id"

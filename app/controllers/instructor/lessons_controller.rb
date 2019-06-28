@@ -1,6 +1,6 @@
 class Instructor::LessonsController < ApplicationController
   before_action :authenticate_user!
-  before_action :require_authorized_for_current_space
+  before_action :require_authorized_for_current_lesson
   def new 
     @lesson = Lesson.new
   end
