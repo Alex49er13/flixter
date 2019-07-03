@@ -21,7 +21,7 @@
         <%= space.title %>
         <%= link_to 'New Lesson', new_instructor_space_lesson_path(space), class: 'float-right btn btn-primary btn-sm' %>
         <ul>
-          <% space.lessons.each do |lesson| %>
+          <% space.lessons.rank(:row_order).each do |lesson| %>
             <li>
               <b><%= lesson.title %></b>
               -
